@@ -1,0 +1,19 @@
+html
+  head
+    link(rel="stylesheet" ,href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css", integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS", crossorigin="anonymous")
+    title FAM App Login
+    script(src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js")
+      
+      
+  body
+    .root
+        .container
+            .form-group#loginform
+                form#myloginform
+                    input#username(type="text", name="username")
+                    input#password(type="password", name="password")
+                    button.btn.btn-primary(type="submit") Login
+            .form-group#logoutform
+                form#mylogoutform
+                    button.btn.btn-primary(type="submit") Log Out
+    script(src="/loginscript.js")

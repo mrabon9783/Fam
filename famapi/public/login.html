@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Fam App</title>
+  <script src = "http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  
+</head>
+
+<body>
+    <div id="root"></div>
+    
+            
+    <div id="loginform">
+        <form id = "myform">
+            <input type="text" name="user" id="user"></input>
+            <input type="text" name="password" id="password"> </input>
+            <input type="submit" value="submit" >LOG ME IN</input>
+        </form>
+    </div>
+    <div id="logoutform">
+        <form id = "mylogoutform">
+            <input type="submit" value="submit" >LOG ME OUT</input>
+        </form>
+    </div>
+    <script src="homescripts.js"></script>
+    <script>
+        $('#myform').submit(function(e) {
+            e.preventDefault();
+            alert('Form submitted!');
+            Login();
+            return false;
+        });
+        $('#mylogoutform').submit(function(e) {
+            e.preventDefault();
+            Logout();
+            return false;
+        });
+    </script>
+  
+</body>
+
+</html>

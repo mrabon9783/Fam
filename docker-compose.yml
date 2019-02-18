@@ -1,0 +1,26 @@
+version: '3'
+
+services:
+  application:
+    build: ./famapi
+    ports:
+      - "8001:8001"
+    links:
+      - mongo
+    networks: 
+      - backend
+    depends_on:
+      - mongo
+  mongo:
+    image: mongo:latest
+    ports:
+      - "27018:27017"
+    volumes:
+      - dockerdata:/data/db
+    networks: 
+      - backend
+volumes:
+  dockerdata:
+
+networks:
+  backend:

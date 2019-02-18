@@ -1,0 +1,33 @@
+extends layout
+
+block content
+  .main.container.navbar-brand
+    .row
+      image(src="/imgs/banner1.png")
+    .row
+      h1.display.m-b-2 McLeod Health Fire and Smoke Damper Inspection Portal
+    div
+      label Building
+      br
+      label Floor
+      br
+      label Asset Location
+      br
+      label Asset #
+      br
+      label Asset Type
+      br
+      form(action="inspect", method="post")
+        div.form-group
+          lable Inspection Result:
+        div.form-check-inline
+          label.form-check-label(for='ip') Pass
+          input#ip.form-check(type='radio', name='ir', value='Pass')
+          label.form-check-label(for='if') Fail
+          input#if.form-check(type='radio', name='ir', value='Fail')
+        div.form-group
+          label.form-group(for='rsn') Reason For Failure:
+          br
+          textarea#rsn.form-group(name="rsn", cols="70", rows="8")
+        button.btn-primary Submit
+  
